@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Declaranet Sonora | Usuarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="csrf-token" content="iorh6kkMTq7f5aJ3V9oTu2c0lTCjOcED6fDDzyfi">
+  <link href="public/images/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+
+  <!-- ================== BEGIN BASE CSS STYLE ================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400,600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+  <link href="public/css/vendor.min.css" rel="stylesheet">
+  <link href="public/css/app.min.css" rel="stylesheet">
+  <!-- ================== END BASE CSS STYLE ================== -->
+
+</head>
+<body class="">
+<!-- BEGIN #app -->
+<div id="app" class="app app-content-full-height app-footer-fixed ">
+
+
+  <!-- BEGIN #sidebar -->
+  <div id="sidebar" class="app-sidebar">
+
+    <div class="auth-bg auth-bg-scroll" style="background-image: url(public/images/login-bg.jpg);">
+      <div class="auth-mask"></div>
+    </div>
+
+
+    <!-- BEGIN scrollbar -->
+    <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+
+
+      <!-- BEGIN mobile-toggler -->
+      <div class="mobile-toggler">
+        <button type="button" class="menu-toggler" data-dismiss="sidebar-mobile">
+          <span class="mdi mdi-arrow-left"> </span>
+        </button>
+      </div>
+      <!-- END mobile-toggler -->
+
+
+
+      <div class="desktop-toggler">
+        <button type="button" class="menu-toggler" data-toggle="sidebar-minify">
+          <span class="mdi mdi-arrow-left"> </span>
+        </button>
+      </div>
+
+
+      <!-- BEGIN brand -->
+      <div class="brand">
+
+
+        <a class="brand-logo" href="public" title="Declaranet">
+          <img src="public/images/escudo-sonora-blanco.svg" class="logo" alt="Declaranet">
+          <h1>Declaranet</h1>
+        </a>
+
+      </div>
+      <!-- END brand -->
+
+
+
+
+
+
+
+      <!-- BEGIN menu -->
+      <div class="menu">
+
+        <div class="menu-header"><span class="menu-text">Navegación</span></div>
+        <div class="menu-item  ">
+          <a href="/" class="menu-link">
+            <span class="menu-icon"><i class="mdi mdi-view-dashboard-variant-outline"></i></span>
+            <span class="menu-text">Inicio</span>
+
+          </a>
+
+        </div>
+        <div class="menu-divider"></div><div class="menu-header"><span class="menu-text">Ajustes</span></div>
+        <div class="menu-item has-sub ">
+          <a href="" class="menu-link">
+            <span class="menu-icon"><i class="mdi mdi-database-outline"></i></span>
+            <span class="menu-text">Catálogos</span>
+            <span class="menu-caret"><b class="caret"></b></span>
+          </a>
+          <div class="menu-submenu">
+            <div class="menu-item  ">
+              <a href="/instituciones" class="menu-link"><span class="menu-text">Instituciones</span></a>
+
+            </div>
+
+            <div class="menu-item  ">
+              <a href="/tipos-de-instituciones" class="menu-link"><span class="menu-text">Tipos de Instituciones</span></a>
+
+            </div>
+          </div>
+        </div>
+        <div class="menu-divider"></div><div class="menu-header"><span class="menu-text">Administración</span></div>
+        <div class="menu-item has-sub active">
+          <a href="" class="menu-link">
+            <span class="menu-icon"><i class="mdi mdi-account-group"></i></span>
+            <span class="menu-text">Acceso</span>
+            <span class="menu-caret"><b class="caret"></b></span>
+          </a>
+          <div class="menu-submenu">
+            <div class="menu-item  active">
+              <a href="/usuarios" class="menu-link"><span class="menu-text">Usuarios</span></a>
+
+            </div>
+
+            <div class="menu-item  ">
+              <a href="/roles" class="menu-link"><span class="menu-text">Roles</span></a>
+
+            </div>
+
+            <div class="menu-item  ">
+              <a href="/permisos" class="menu-link"><span class="menu-text">Permisos</span></a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-item  ">
+          <a href="/bitacora/" class="menu-link">
+            <span class="menu-icon"><i class="mdi mdi-book-clock-outline"></i></span>
+            <span class="menu-text">Bitácora</span>
+
+          </a>
+
+        </div>
+        <div class="menu-divider"></div><div class="menu-header"><span class="menu-text">Cerrar Sesión</span></div>
+        <div class="menu-item  ">
+          <a href="/salir" class="menu-link">
+            <span class="menu-icon"><i class="mdi mdi-logout-variant"></i></span>
+            <span class="menu-text">Salir del Sistema</span>
+
+          </a>
+
+        </div>
+      </div>
+      <!-- END menu -->
+    </div>
+    <!-- END scrollbar -->
+
+    <!-- BEGIN mobile-sidebar-backdrop -->
+    <button class="app-sidebar-mobile-backdrop" data-dismiss="sidebar-mobile"></button>
+    <!-- END mobile-sidebar-backdrop -->
+  </div>
+  <!-- END #sidebar -->
+
+  <div id="content" class="app-content">
+
+    <div class="container-fluid ">
+
+      <!-- BEGIN #header -->
+      <div id="header" class="app-header">
+
+
+        <!-- BEGIN mobile-toggler -->
+        <div class="mobile-toggler">
+          <button type="button" class="menu-toggler" data-toggle="sidebar-mobile">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+        <!-- END mobile-toggler -->
+
+
+        <!-- BEGIN menu -->
+        <div class="menu">
+
+          <h3 class="page-header">
+            Usuarios        </h3>
+
+
+          <form class="menu-search" method="POST" name="header_search_form">
+            <div class="menu-search-icon"><i class="mdi mdi-magnify"></i></div>
+            <div class="menu-search-input">
+              <select class="form-control select2Agreements" autocomplete="off" name="agreementsSearch"></select>
+
+
+
+            </div>
+          </form>
+
+
+
+          <div class="menu-item dropdown ">
+            <a href="#" data-bs-toggle="dropdown" title=" Usuario Verificado " data-bs-display="static" class="menu-link">
+              <div class="menu-img">
+                <i class="mdi mdi-account-circle-outline"></i>
+              </div>
+
+              <div class="menu-text lh-1">
+
+                Miguel Romero  <span class="mdi mdi-chevron-down"></span>
+                <small class="d-block fw-normal">miguel.romero@sonora.gob.mx</small>
+
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end me-lg-3 py-0 border">
+              <a class="dropdown-item d-flex align-items-center" href="public/perfil">
+                <span class="mdi mdi-account-circle fs-4 me-2 text-pink"></span> Mi perfil
+              </a>
+              <div class="dropdown-divider my-0"></div>
+
+              <a class="dropdown-item d-flex align-items-center" href="public/perfil">
+                <i class="mdi mdi-face-agent fs-4 me-2 text-pink"></i> Soporte
+              </a>
+              <div class="dropdown-divider my-0"></div>
+
+
+
+
+              <a class="dropdown-item d-flex align-items-center" href="public/salir"
+                 onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                <span class="mdi mdi-exit-to-app fs-4 me-2 text-pink"></span> Salir
+              </a>
+
+              <form id="logout-form" action="public/salir" method="POST" class="d-none">
+                <input type="hidden" name="_token" value="iorh6kkMTq7f5aJ3V9oTu2c0lTCjOcED6fDDzyfi">                </form>
+            </div>
+          </div>
+        </div>
+        <!-- END menu -->
+      </div>
+      <!-- END #header -->
+      <section class="py-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+
+            <li class="breadcrumb-item"><a href="public">Inicio</a></li>
+
+
+            <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+
+          </ol>
+        </nav>
+
+      </section>
+
+      <section class="bg-light app-filters">
+
+
+        <form method="POST" action="public/usuarios" accept-charset="UTF-8" autocomplete="off"><input name="_token" type="hidden" value="iorh6kkMTq7f5aJ3V9oTu2c0lTCjOcED6fDDzyfi">
+          <div class="row g-3">
+
+            <div class="col-12 col-sm-3">
+              <label for="name" class="form-label">Nombre o Correo Electrónico</label>
+              <input class="form-control" placeholder="Buscar por nombre o correo electrónico" name="name" type="text">
+            </div>
+
+
+            <div class="col-6 col-sm-3">
+              <label for="role" class="form-label">Roles de Usuario</label>
+              <select class="form-select picker" name="role"><option value="" selected="selected">Roles de Usuario</option><option value="2">Administrador</option><option value="3">Enlace</option><option value="1">Super Usuario</option></select>
+            </div>
+
+
+
+
+            <div class="col-6 col-sm-3">
+              <label for="ages" class="form-label">Edades</label>
+              <select id="ages" placeholder="Selecciona un rango de edad...">
+                <option>18-30</option>
+                <option>31-40</option>
+                <option>41-50</option>
+                <option>51-60</option>
+                <option>61-70</option>
+                <option>70 y más</option>
+              </select>
+            </div>
+
+
+
+
+            <div class="col-12 col-sm-3 text-end pt-4">
+              <a href="public/usuarios" class="btn btn-sm btn-default">Reestablecer</a>
+              <input class="btn btn-sm btn-info" type="submit" value="Filtrar">
+            </div>
+
+
+            <div class="col-6 col-sm-3">
+              <label for="organisms" class="form-label">Dependencias</label>
+              <select id="organisms" placeholder="Selecciona una dependencia">
+                <option>Seleccionar</option>
+                <option>Oficialía Mayor</option>
+                <option>Secretaría de Económia</option>
+                <option>Secretaría de Salud</option>
+                <option>Secretaría de Gobierno</option>
+                <option>Secretaría de Seguridad</option>
+              </select>
+            </div>
+
+            <div class="col-6 col-sm-3">
+              <label for="daterangepicker" class="form-label">Rango de Fechas</label>
+              <div id="daterangepicker" name="daterangepicker" title="Rango de Fechas"></div>
+            </div>
+
+
+
+            <div class="col-6 col-sm-3">
+              <label for="dateinput" class="form-label">Fecha</label>
+              <input id="dateinput" title="Fecha">
+            </div>
+
+
+
+
+            <div class="col-6 col-sm-3">
+              <label for="rangeslider" class="form-label d-block">Monto</label>
+              <div id="rangeslider" class="humidity" >
+                <input />
+                <input />
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </form>
+
+      </section>
+
+      <section class="py-4">
+
+
+        <div class="row">
+          <div class="col-sm-8">
+            <a class="btn btn-success btn-sm" href="public/usuarios/crear" title="Nuevo Usuario">
+              <span class="mdi mdi-plus"></span> Agregar
+            </a>
+
+            <a href="#" class="btn btn-warning btn-sm">
+              <i class="mdi mdi-file-document-edit"></i> Editar
+            </a>
+
+            <a data-message="¿Esta seguro de eliminar este registro?"
+               href="#" class="btn btn-danger btn-confirm btn-sm">
+              <i class="mdi mdi-trash-can"></i> Eliminar
+            </a>
+
+
+            <a class="btn btn-outline-success btn-sm" href="public/usuarios/crear" title="Nuevo Usuario">
+              <span class="mdi mdi-check-circle"></span> Aprobar
+            </a>
+
+            <a class="btn btn-outline-danger btn-sm" href="public/usuarios/crear" title="Nuevo Usuario">
+              <span class="mdi mdi-cancel"></span> Rechazar
+            </a>
+          </div>
+
+          <div class="col-sm-4 text-end">
+            Exportar a:
+
+            <a class="btn btn-outline-success btn-sm px-3" href="public/usuarios/crear" title="Nuevo Usuario">
+              <span class="mdi mdi-microsoft-excel"></span> Excel
+            </a>
+
+            <a class="btn btn-outline-danger btn-sm px-3" href="public/usuarios/crear" title="Nuevo Usuario">
+              <span class="mdi mdi-file-pdf-box"></span> PDF
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+
+
+      </section>
+
+      <section class="">
+        <section class="system-messages">
+
+          <div class="container-fluid">
+            <div>
+            </div>
+          </div>
+        </section>
+
+        <section class="system-error-messages">
+
+
+        </section>
+      </section>
+
+
+
+
+
+      <div class="">
+
+
+
+
+
+      </div>
+
+      <div id="grid"></div>
+
+      <div class="d-flex justify-content-center">
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+</div>
+<!-- END #app -->
+<!-- BEGIN btn-scroll-top -->
+<a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+<!-- END btn-scroll-top -->
+<!-- ================== BEGIN BASE JS ================== -->
+<script src="public/js/vendor.min.js"></script>
+<script src="public/js/app.min.js"></script>
+<!-- ================== END BASE JS ================== -->
+<script defer src="public/js/plugins/telerik-ui/js/kendo.all.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+
+    let confKendo = {
+      size: "medium",
+      rounded: "medium",
+      fillMode: "outline"
+    }
+
+
+
+    function avatarTemplate(id,avatar,email_verified_at)
+    {
+
+      let html = "";
+
+      html += ' <div class="position-relative">';
+
+      html += '<img style="width: 2rem" src="images/avatars/'+avatar+'" class="rounded-circle">';
+
+      if(email_verified_at != null)
+        html += '<span class="mdi mdi-circle text-success position-absolute top right small" title="Verificado"></span>';
+      else
+        html += '<span class="mdi mdi-circle text-danger position-absolute top right small" title="No verificado"></span>';
+
+      html += ' </div>';
+
+      return html;
+
+    }
+
+    function onChange(arg) {
+      kendoConsole.log("The selected product ids are: [" + this.selectedKeyNames().join(", ") + "]");
+    }
+
+    $("#organisms").kendoComboBox(confKendo);
+    $("#ages").kendoComboBox(confKendo);
+
+
+    $("#daterangepicker").kendoDateRangePicker(confKendo);
+
+
+    $("#dateinput").kendoDatePicker();
+
+    function rangeSliderOnSlide(e) {
+      kendoConsole.log("Slide :: new slide values are: " + e.value.toString().replace(",", " - "));
+    }
+
+    function rangeSliderOnChange(e) {
+      kendoConsole.log("Change :: new values are: " + e.value.toString().replace(",", " - "));
+    }
+
+
+    $("#rangeslider").kendoRangeSlider({
+      change: rangeSliderOnChange,
+      slide: rangeSliderOnSlide,
+      min: 0,
+      max: 10,
+      smallStep: 1,
+      largeStep: 2,
+      tickPlacement: "both"
+    });
+
+
+
+    $("#grid").kendoGrid({
+      dataSource: {
+        //type: "json",
+        data: [{"id":1,"name":"Miguel Romero","email":"miguel.romero@sonora.gob.mx","avatar":"default.png","email_verified_at":"2022-05-06T22:48:32.000000Z"},{"id":2,"name":"Ms. Domenica Harris","email":"nolan.elmo@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":3,"name":"Prof. Cortney Nicolas I","email":"king.lamar@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":4,"name":"Alessandro Hauck","email":"welch.clotilde@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":5,"name":"Prof. Patience Hilpert","email":"dessie75@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":6,"name":"Loren Raynor","email":"brandt.brown@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":7,"name":"Wayne Kshlerin","email":"ariane60@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":8,"name":"Mr. Johnnie Koepp DVM","email":"ylowe@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":9,"name":"Miss Viva Runolfsdottir V","email":"qyost@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":10,"name":"Helena Bartell","email":"camille26@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":11,"name":"Miss Rosalia Schiller Jr.","email":"marcelle24@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":12,"name":"Enrique Howell","email":"koelpin.rashawn@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":13,"name":"Liana Flatley Jr.","email":"hansen.clotilde@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":14,"name":"Prof. Deangelo Metz","email":"sraynor@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":15,"name":"Fritz McDermott","email":"kristin.kihn@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:08.000000Z"},{"id":16,"name":"Marco Grant V","email":"audie40@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":17,"name":"Natalia McClure","email":"wwilkinson@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":18,"name":"Miss Marian Kunde","email":"isom.blick@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":19,"name":"Roselyn Frami","email":"considine.gabriella@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":20,"name":"Vicenta Bahringer","email":"dubuque.tara@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":21,"name":"Jaunita Miller DDS","email":"rconsidine@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":22,"name":"Camille Kunde","email":"zoila95@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":23,"name":"Mr. Jakob Trantow","email":"farrell.bud@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":24,"name":"Roxane Ebert","email":"bethany85@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":25,"name":"Polly Senger","email":"tspinka@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":26,"name":"Otilia Wunsch","email":"schamberger.thurman@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":27,"name":"Theo Frami","email":"okon.kaia@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":28,"name":"Ms. Fleta Reinger Sr.","email":"mozelle85@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":29,"name":"Zena Prohaska","email":"braun.lupe@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":30,"name":"Jaycee Skiles Sr.","email":"hsipes@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":31,"name":"Ashly Hoppe","email":"edwardo.kris@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":32,"name":"Mrs. Thelma Brown I","email":"igutkowski@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":33,"name":"Clotilde Weissnat","email":"retta.windler@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":34,"name":"Ruby Casper","email":"timothy47@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:09.000000Z"},{"id":35,"name":"Miss Elva Vandervort MD","email":"deanna.lang@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":36,"name":"Alden Conn","email":"bartell.ashlee@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":37,"name":"Ulices Hermann","email":"bahringer.kassandra@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":38,"name":"Lonzo Grimes","email":"keegan.gerhold@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":39,"name":"Ms. Josianne Franecki DVM","email":"mandy95@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":40,"name":"Anthony Schultz","email":"paxton.kautzer@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":41,"name":"Drake Schinner","email":"marshall.bins@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":42,"name":"Haylee Heller","email":"wolff.sadie@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":43,"name":"Jordy Luettgen","email":"keegan.purdy@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":44,"name":"Brandy Gerhold","email":"jordi18@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":45,"name":"Veda Jacobson","email":"benjamin.rosenbaum@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":46,"name":"Wilma Stoltenberg","email":"crona.rickey@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":47,"name":"Keshaun Walter MD","email":"catherine.sporer@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":48,"name":"Mr. Mervin Christiansen","email":"kchristiansen@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":49,"name":"Hunter Kovacek","email":"darryl.skiles@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":50,"name":"Mrs. Norene Schuster Jr.","email":"verlie42@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":51,"name":"Lila Rath Sr.","email":"serenity.mertz@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":52,"name":"Ana Ritchie","email":"nathanael.gerlach@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":53,"name":"Lazaro Vandervort","email":"schroeder.eliza@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":54,"name":"Erica Welch II","email":"wilma.schumm@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:10.000000Z"},{"id":55,"name":"Miss Shannon Dooley","email":"wstracke@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":56,"name":"Edd Hodkiewicz","email":"clyde34@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":57,"name":"Crystal Grimes","email":"dovie88@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":58,"name":"Dr. Crawford Kovacek DVM","email":"enola.davis@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":59,"name":"Dovie Kulas MD","email":"krystina35@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":60,"name":"Maryse Murray","email":"lemke.brooks@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":61,"name":"Mrs. Julia Abshire","email":"fshanahan@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":62,"name":"Joannie Bergnaum","email":"madie57@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":63,"name":"Garrick Fahey","email":"rolfson.felicia@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":64,"name":"Mr. Alexie Hauck","email":"rgoyette@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":65,"name":"Liliane Price","email":"helene.lang@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":66,"name":"Mallory Anderson","email":"toney07@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":67,"name":"Dr. Herbert Ebert IV","email":"igusikowski@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":68,"name":"Prof. May Leffler","email":"caroline.beatty@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":69,"name":"Cyrus Lind","email":"jones.sandrine@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":70,"name":"Stephany Smith","email":"lane95@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":71,"name":"Concepcion Gaylord","email":"merdman@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":72,"name":"Dr. Madisyn Gerlach Sr.","email":"ckoch@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":73,"name":"Kara Boyle","email":"shania.kshlerin@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":74,"name":"Alyce Green","email":"clarabelle99@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":75,"name":"Opal West","email":"qledner@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:11.000000Z"},{"id":76,"name":"Donna Doyle","email":"josue.cassin@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":77,"name":"Jarrell Hudson Jr.","email":"price.cordell@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":78,"name":"Mrs. Jolie Hand","email":"karson27@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":79,"name":"Abe Balistreri","email":"cleannon@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":80,"name":"Dr. Assunta O'Conner IV","email":"may60@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":81,"name":"Malinda Streich","email":"srutherford@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":82,"name":"Javonte Conroy","email":"fabian57@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":83,"name":"Dr. Makenna D'Amore","email":"jairo39@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":84,"name":"Prof. Kristopher Swift V","email":"arnaldo.graham@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":85,"name":"Evert Altenwerth","email":"ryan.nikolaus@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":86,"name":"Chauncey Kuhn V","email":"modesta.zboncak@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":87,"name":"Kamille Schaden DDS","email":"daugherty.sherman@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":88,"name":"Jessy Walter","email":"kirstin.heaney@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":89,"name":"Adaline Johns","email":"bergstrom.eva@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":90,"name":"Candice Stracke","email":"tremblay.jevon@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":91,"name":"Pablo Gutkowski","email":"ipacocha@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":92,"name":"Octavia Beier","email":"cheathcote@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":93,"name":"Prof. Cleve Waelchi","email":"melba65@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":94,"name":"Mr. Rocky Feil Sr.","email":"yaltenwerth@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":95,"name":"Arianna McClure","email":"tiara.koch@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:12.000000Z"},{"id":96,"name":"Selena Bauch","email":"zgusikowski@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":97,"name":"Mrs. Leonora Lang","email":"esta95@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":98,"name":"Dr. Jovanny Beahan III","email":"erika15@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":99,"name":"Randi Hammes","email":"tyree44@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":100,"name":"Leann Waters","email":"zlittel@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":101,"name":"Dr. Ford Padberg","email":"mreilly@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":102,"name":"Shyanne Kirlin I","email":"berenice06@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":103,"name":"Prof. Salma Barton","email":"susan68@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":104,"name":"Keagan Orn","email":"maxie96@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":105,"name":"Hilbert Macejkovic","email":"addie.oberbrunner@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":106,"name":"Jewell Schowalter IV","email":"jones.ara@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":107,"name":"Prof. Josh Dach PhD","email":"barton.jarrell@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":108,"name":"Darrin Crooks","email":"svolkman@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":109,"name":"Jenifer Boehm DDS","email":"xpacocha@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":110,"name":"Tess Krajcik","email":"elliott69@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":111,"name":"Noemie Cummerata","email":"oschamberger@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":112,"name":"Geraldine Johnston","email":"murazik.kelley@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":113,"name":"Prof. Kacey Larson Jr.","email":"trisha.reinger@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":114,"name":"Prof. Conrad Schumm V","email":"nella.crooks@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":115,"name":"Pearlie Langworth MD","email":"jaskolski.daron@example.com","avatar":"default.png","email_verified_at":"2023-04-13T17:59:13.000000Z"},{"id":116,"name":"Dustin Walsh","email":"gmiller@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:14.000000Z"},{"id":117,"name":"Dr. Ollie Considine","email":"cskiles@example.net","avatar":"default.png","email_verified_at":"2023-04-13T17:59:14.000000Z"},{"id":118,"name":"Jermey O'Kon","email":"ldare@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:14.000000Z"},{"id":119,"name":"Prof. Clair Bernhard","email":"nannie.hill@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:14.000000Z"},{"id":120,"name":"Mr. Billy Lemke","email":"precious95@example.org","avatar":"default.png","email_verified_at":"2023-04-13T17:59:14.000000Z"}],
+        schema: {
+          model: {
+            id: "id",
+            fields: {
+              id: { type: "number" },
+              avatar: { type: "string" },
+              name: { type: "string" },
+              email: { type: "string" },
+              email_verified_at: { type: "date" },
+
+              //Rol: { type: "string" },
+              //ShipCity: { type: "string" }
+            }
+          }
+        },
+        pageSize: 20,
+
+        serverPaging: false,
+        serverFiltering: true,
+
+      },
+      pageable: {
+        alwaysVisible: true,
+        pageSizes: [5, 10, 20, 100]
+      },
+      height: 400,
+      //filterable: {
+      //  mode: "row"
+      //},
+
+      sortable: {
+        mode: "multiple"
+      },
+
+      filterable: {
+        extra: false,
+        operators: {
+          string: {
+            startswith: "Starts with",
+            eq: "Is equal to",
+            neq: "Is not equal to"
+          }
+        }
+      },
+
+      persistSelection: true,
+      change: onChange,
+      columns: [
+            { selectable: true, width: "40px" },
+            {
+              template: function(dataItem) {
+                return avatarTemplate(dataItem.id, dataItem.avatar, dataItem.email_verified_at);
+              },
+              field: "avatar",
+              title: "Avatar",
+              width: 60,
+              filterable: false
+            },
+            {
+              field: "name",
+              width: 500,
+              title: "Nombre",
+              filterable: {
+                cell: {
+                  operator: "contains",
+                  suggestionOperator: "contains"
+                }
+              }
+            },{
+            field: "email",
+            width: 255,
+            title: "Correo Electrónico",
+            filterable: {
+              cell: {
+                operator: "gte"
+              }
+            }
+          },{
+            field: "email_verified_at",
+            width: 255,
+            title: "Fecha de Verificación",
+            format: "{0:MM/dd/yyyy}"
+          }
+      ]
+    });
+  });
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css" />
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.select2Agreements').select2({
+          theme: 'bootstrap-5',
+          allowClear: true,
+          //multiple: true,
+          language: 'es',
+          //templateResult: formatList,
+          escapeMarkup: function(markup) {
+            return markup;
+          },
+          templateResult: function(data) {
+            return data.html;
+          },
+          templateSelection: function(data) {
+            return data.text;
+          },
+          placeholder: 'Buscar un acuerdo por número o descripción',
+          //minimumInputLength: 1,
+          ajax: {
+            url: '/acuerdos/ajax',
+            dataType: 'json',
+            method: 'POST',
+            delay: 250,
+            data: function (params) {
+              return {
+                term: params.term,
+                type: 'agreements'
+              }
+            },
+            processResults: function (data, page) {
+              return {
+                results: data
+              };
+            },
+          }
+
+        });
+        $('.select2Agreements').on('select2:select', function (e) {
+          var data = e.params.data;
+          window.location = "/acuerdos/"+data.id+"/seguimiento/";
+        });
+    });
+</script>
+</body>
+</html>

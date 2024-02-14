@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnGF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="235dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="54dp"
+        android:text="CONVERTIDOR DE GRADOS"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Grados °C"
+        app:layout_constraintBottom_toTopOf="@+id/etF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etF"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Grados °F"
+        app:layout_constraintBottom_toTopOf="@+id/btnGF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etC" />
+
+    <Button
+        android:id="@+id/btnGC"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="44dp"
+        android:text="°C"
+        app:layout_constraintEnd_toStartOf="@+id/btnGF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnGF" />
+
+    <Button
+        android:id="@+id/btnGF"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="305dp"
+        android:text="°F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintTop_toBottomOf="@+id/etF"
+        tools:ignore="DuplicateIds" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

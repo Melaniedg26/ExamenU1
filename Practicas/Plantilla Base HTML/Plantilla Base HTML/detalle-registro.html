@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+<title>Registrar Escrituras</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="csrf-token" content="SZs1mq4nBVqgS4b8PvCdIMpKBmndAJD9TsecKOdp">
+<link href="public/images/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+
+<!-- ================== BEGIN BASE CSS STYLE ================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+<link href="public/css/vendor.min.css" rel="stylesheet">
+<link href="public/css/app.min.css" rel="stylesheet">
+<!-- ================== END BASE CSS STYLE ================== -->
+</head>
+<body class="">
+	<!-- BEGIN #app -->
+
+	<div id="app" class="app app-content-full-height app-footer-fixed ">
+
+
+		<!-- BEGIN #sidebar -->
+<div id="sidebar" class="app-sidebar">
+
+    <div class="auth-bg auth-bg-scroll" style="background-image: url(public/images/login-bg.jpg);">
+        <div class="auth-mask"></div>
+    </div>
+
+
+    <!-- BEGIN scrollbar -->
+    <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+
+
+        <!-- BEGIN mobile-toggler -->
+        <div class="mobile-toggler">
+            <button type="button" class="menu-toggler" data-dismiss="sidebar-mobile">
+                <span class="mdi mdi-arrow-left"> </span>
+            </button>
+        </div>
+        <!-- END mobile-toggler -->
+
+
+
+        <div class="desktop-toggler">
+            <button type="button" class="menu-toggler" data-toggle="sidebar-minify">
+                <span class="mdi mdi-arrow-left"> </span>
+            </button>
+        </div>
+
+
+        <!-- BEGIN brand -->
+        <div class="brand">
+
+
+            <a class="brand-logo" href="public" title="Declaranet">
+                <img src="public/images/escudo-sonora-blanco.svg" class="logo" alt="Declaranet">
+                <h1>Declaranet</h1>
+            </a>
+
+        </div>
+        <!-- END brand -->
+
+
+
+
+
+
+
+        <!-- BEGIN menu -->
+        <div class="menu">
+
+            <div class="menu-header"><span class="menu-text">Navegación</span></div>
+                            <div class="menu-item  ">
+                                <a href="/" class="menu-link">
+                                    <span class="menu-icon"><i class="mdi mdi-view-dashboard-variant-outline"></i></span>
+                                    <span class="menu-text">Inicio</span>
+                                    
+                                </a>
+                                
+                            </div>
+                        <div class="menu-divider"></div><div class="menu-header"><span class="menu-text">Ajustes</span></div>
+                            <div class="menu-item has-sub ">
+                                <a href="" class="menu-link">
+                                    <span class="menu-icon"><i class="mdi mdi-database-outline"></i></span>
+                                    <span class="menu-text">Catálogos</span>
+                                    <span class="menu-caret"><b class="caret"></b></span>
+                                </a>
+                                <div class="menu-submenu">
+							<div class="menu-item  ">
+								<a href="/instituciones" class="menu-link"><span class="menu-text">Instituciones</span></a>
+								
+							</div>
+						
+							<div class="menu-item  ">
+								<a href="/tipos-de-instituciones" class="menu-link"><span class="menu-text">Tipos de Instituciones</span></a>
+								
+							</div>
+						</div>
+                            </div>
+                        <div class="menu-divider"></div><div class="menu-header"><span class="menu-text">Administración</span></div>
+                            <div class="menu-item has-sub ">
+                                <a href="" class="menu-link">
+                                    <span class="menu-icon"><i class="mdi mdi-account-group"></i></span>
+                                    <span class="menu-text">Acceso</span>
+                                    <span class="menu-caret"><b class="caret"></b></span>
+                                </a>
+                                <div class="menu-submenu">
+							<div class="menu-item  ">
+								<a href="/usuarios" class="menu-link"><span class="menu-text">Usuarios</span></a>
+								
+							</div>
+						
+							<div class="menu-item  ">
+								<a href="/roles" class="menu-link"><span class="menu-text">Roles</span></a>
+								
+							</div>
+						
+							<div class="menu-item  ">
+								<a href="/permisos" class="menu-link"><span class="menu-text">Permisos</span></a>
+								
+							</div>
+						</div>
+                            </div>
+                        
+                            <div class="menu-item  ">
+                                <a href="/bitacora/" class="menu-link">
+                                    <span class="menu-icon"><i class="mdi mdi-book-clock-outline"></i></span>
+                                    <span class="menu-text">Bitácora</span>
+                                    
+                                </a>
+                                
+                            </div>
+                        <div class="menu-divider"></div><div class="menu-header"><span class="menu-text">Cerrar Sesión</span></div>
+                            <div class="menu-item  ">
+                                <a href="/salir" class="menu-link">
+                                    <span class="menu-icon"><i class="mdi mdi-logout-variant"></i></span>
+                                    <span class="menu-text">Salir del Sistema</span>
+                                    
+                                </a>
+                                
+                            </div>
+                                </div>
+        <!-- END menu -->
+    </div>
+    <!-- END scrollbar -->
+
+    <!-- BEGIN mobile-sidebar-backdrop -->
+    <button class="app-sidebar-mobile-backdrop" data-dismiss="sidebar-mobile"></button>
+    <!-- END mobile-sidebar-backdrop -->
+</div>
+<!-- END #sidebar -->
+
+        <div id="content" class="app-content">
+
+            <div class="container-fluid ">
+
+                <!-- BEGIN #header -->
+<div id="header" class="app-header">
+
+
+    <!-- BEGIN mobile-toggler -->
+    <div class="mobile-toggler">
+        <button type="button" class="menu-toggler" data-toggle="sidebar-mobile">
+            <span class="mdi mdi-menu"></span>
+        </button>
+    </div>
+    <!-- END mobile-toggler -->
+
+
+    <!-- BEGIN menu -->
+    <div class="menu">
+
+        <h3 class="page-header">
+            Registrar Escrituras        </h3>
+
+
+        <form class="menu-search" method="POST" name="header_search_form">
+            <div class="menu-search-icon"><i class="mdi mdi-magnify"></i></div>
+            <div class="menu-search-input">
+                <select class="form-control select2Agreements" autocomplete="off" name="agreementsSearch"></select>
+
+
+
+            </div>
+        </form>
+
+        
+
+        <div class="menu-item dropdown ">
+            <a href="#" data-bs-toggle="dropdown" title=" Usuario Verificado " data-bs-display="static" class="menu-link">
+                <div class="menu-img">
+                    <i class="mdi mdi-account-circle-outline"></i>
+                </div>
+
+                <div class="menu-text lh-1">
+
+                   Miguel Romero  <span class="mdi mdi-chevron-down"></span>
+                    <small class="d-block fw-normal">miguel.romero@sonora.gob.mx</small>
+
+                </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end me-lg-3 py-0 border">
+                <a class="dropdown-item d-flex align-items-center" href="public/perfil">
+                    <span class="mdi mdi-account-circle fs-4 me-2 text-pink"></span> Mi perfil
+                </a>
+                <div class="dropdown-divider my-0"></div>
+
+                <a class="dropdown-item d-flex align-items-center" href="public/perfil">
+                    <i class="mdi mdi-face-agent fs-4 me-2 text-pink"></i> Soporte
+                </a>
+                <div class="dropdown-divider my-0"></div>
+
+                
+
+
+                <a class="dropdown-item d-flex align-items-center" href="public/salir"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    <span class="mdi mdi-exit-to-app fs-4 me-2 text-pink"></span> Salir
+                </a>
+
+                <form id="logout-form" action="public/salir" method="POST" class="d-none">
+                    <input type="hidden" name="_token" value="SZs1mq4nBVqgS4b8PvCdIMpKBmndAJD9TsecKOdp">                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END menu -->
+</div>
+<!-- END #header -->
+                <section class="py-3">
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            
+                                    <li class="breadcrumb-item"><a href="public">Inicio</a></li>
+                
+            
+                                    <li class="breadcrumb-item"><a href="public/escrituras">Escrituras</a></li>
+                
+            
+                                    <li class="breadcrumb-item active" aria-current="page">Registro de Escrituras</li>
+                
+                    </ol>
+    </nav>
+
+</section>
+
+
+<section class="py-4">
+    </section>
+
+<section class="">
+    <section class="system-messages">
+
+    <div class="container-fluid">
+        <div>
+                    </div>
+    </div>
+</section>
+
+<section class="system-error-messages">
+
+    
+</section>
+</section>
+
+
+	            
+
+
+    <form method="POST" action="public/usuarios/crear" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="SZs1mq4nBVqgS4b8PvCdIMpKBmndAJD9TsecKOdp">
+
+
+    <h3 class="text-primary fw-700 mb-4"> Datos Generales</h3>
+
+
+    <div class="row gx-3">
+        <div class="col-sm-8">
+            <div class="row g-3">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="notaria" class="form-label">Notaria</label>
+                        <input class="form-control" readonly="true" placeholder="Número Notaria" required name="notaria" type="text" id="notaria">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-9">
+                    <div class="form-group">
+                        <label for="notarioPublico" class="form-label">Notario P&uacute;blico</label>
+                        <input class="form-control" readonly="true" placeholder="Nombre del Notario Público" required name="notarioPublico" type="text" id="notarioPublico">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="libro" class="form-label">Libro</label>
+                        <input class="form-control" readonly="true" placeholder="Número de Libro" required name="libro" type="text" id="libro">
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="numeroEscritura" class="form-label">N&uacute;mero de Escritura</label>
+                        <input class="form-control" readonly="true" placeholder="Número de Escritura" required name="numeroEscritura" type="text" id="numeroEscritura">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="fechaEscritura" class="form-label">Fecha de Escritura</label>
+                        <input class="fechaEscritura" readonly="true" placeholder="Fecha de Escritura" required name="fechaEscritura" type="text" id="fechaEscritura">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="comentarios" class="form-label">Comentarios</label>
+                <textarea class="form-control" readonly="true" rows="3" placeholder="Comentarios" required name="comentarios" cols="50" id="comentarios"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <!-- es importante agregar la clase customTabStrip  -->
+
+    <div id="tabstrip" class="my-5 customTabStrip">
+        <ul>
+            <li class="k-active">
+                Actos
+            </li>
+            <li>
+                Partes
+            </li>
+            <li>
+                Datos del Inmueble
+            </li>
+            <li>
+                Documentos
+            </li>
+            <li>
+                Estatus del proceso
+            </li>
+        </ul>
+        <div>
+
+
+            <h4 class="mb-3 text-secondary fw-bold">Actos</h4>
+            <div class="mb-3">
+                <button type="button" class="btn btn-success"><span class="mdi mdi-plus"></span> Agregar</button>
+                <button type="button" class="btn btn-warning"><span class="mdi mdi-pencil"></span> Editar</button>
+                <button type="button" class="btn btn-danger"><span class="mdi mdi-trash-can-outline"></span> Eliminar</button>
+            </div>
+            <div id="grid"></div>
+
+
+        </div>
+        <div>
+            <p>Ut orci ligula, varius ac consequat in, rhoncus in dolor. Mauris pulvinar molestie accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean velit ligula, pharetra quis aliquam sed, scelerisque sed sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam dui mi, vulputate vitae pulvinar ac, condimentum sed eros.</p>
+        </div>
+        <div>
+            <p>Aliquam at nisl quis est adipiscing bibendum. Nam malesuada eros facilisis arcu vulputate at aliquam nunc tempor. In commodo scelerisque enim, eget sodales lorem condimentum rutrum. Phasellus sem metus, ultricies at commodo in, tristique non est. Morbi vel mauris eget mauris commodo elementum. Nam eget libero lacus, ut sollicitudin ante. Nam odio quam, suscipit a fringilla eget, dignissim nec arcu. Donec tristique arcu ut sapien elementum pellentesque.</p>
+        </div>
+
+        <div>
+            <p>Aliquam at nisl quis est adipiscing bibendum. Nam malesuada eros facilisis arcu vulputate at aliquam nunc tempor. In commodo scelerisque enim, eget sodales lorem condimentum rutrum. Phasellus sem metus, ultricies at commodo in, tristique non est. Morbi vel mauris eget mauris commodo elementum. Nam eget libero lacus, ut sollicitudin ante. Nam odio quam, suscipit a fringilla eget, dignissim nec arcu. Donec tristique arcu ut sapien elementum pellentesque.</p>
+        </div>
+
+        <div>
+            <p>Aliquam at nisl quis est adipiscing bibendum. Nam malesuada eros facilisis arcu vulputate at aliquam nunc tempor. In commodo scelerisque enim, eget sodales lorem condimentum rutrum. Phasellus sem metus, ultricies at commodo in, tristique non est. Morbi vel mauris eget mauris commodo elementum. Nam eget libero lacus, ut sollicitudin ante. Nam odio quam, suscipit a fringilla eget, dignissim nec arcu. Donec tristique arcu ut sapien elementum pellentesque.</p>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        
+	</div>
+	<!-- END #app -->
+	<!-- BEGIN btn-scroll-top -->
+<a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+<!-- END btn-scroll-top -->
+	<!-- ================== BEGIN BASE JS ================== -->
+<script src="public/js/vendor.min.js"></script>
+<script src="public/js/app.min.js"></script>
+<!-- ================== END BASE JS ================== -->
+
+
+
+    <script defer src="public/js/plugins/telerik-ui/js/kendo.all.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+
+            let confKendo = {
+                size: "medium",
+                rounded: "medium",
+                fillMode: "outline"
+            }
+
+            $(".fechaEscritura").kendoDatePicker(confKendo);
+
+
+            $("#tabstrip").kendoTabStrip({
+                tabPosition: "left",
+                animation: { open: { effects: "fadeIn" } }
+            });
+
+
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#grid").kendoGrid({
+                dataSource: {
+                    type: "odata",
+                    transport: {
+                        read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
+                    },
+                    schema: {
+                        model: {
+                            fields: {
+                                OrderID: { type: "number" },
+                                Freight: { type: "number" },
+                                ShipName: { type: "string" },
+                                OrderDate: { type: "date" },
+                                ShipCity: { type: "string" }
+                            }
+                        }
+                    },
+                    pageSize: 20,
+                    serverPaging: true,
+                    serverFiltering: true,
+                    serverSorting: true
+                },
+                height: 550,
+                filterable: true,
+                sortable: true,
+                pageable: true,
+                columns: [{
+                    field:"OrderID",
+                    filterable: false
+                },
+                    "Freight",
+                    {
+                        field: "OrderDate",
+                        title: "Order Date",
+                        format: "{0:MM/dd/yyyy}"
+                    }, {
+                        field: "ShipName",
+                        title: "Ship Name"
+                    }, {
+                        field: "ShipCity",
+                        title: "Ship City"
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css" />
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+
+
+
+
+
+            $('.select2Agreements').select2({
+                theme: 'bootstrap-5',
+                allowClear: true,
+                //multiple: true,
+                language: 'es',
+                //templateResult: formatList,
+                escapeMarkup: function(markup) {
+                    return markup;
+                },
+                templateResult: function(data) {
+                    return data.html;
+                },
+                templateSelection: function(data) {
+                    return data.text;
+                },
+                placeholder: 'Buscar un acuerdo por número o descripción',
+                //minimumInputLength: 1,
+                ajax: {
+                    url: '/acuerdos/ajax',
+                    dataType: 'json',
+                    method: 'POST',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            term: params.term,
+                            type: 'agreements'
+                        }
+                    },
+                    processResults: function (data, page) {
+                        return {
+                            results: data
+                        };
+                    },
+                }
+
+            });
+
+
+            $('.select2Agreements').on('select2:select', function (e) {
+                var data = e.params.data;
+                window.location = "/acuerdos/"+data.id+"/seguimiento/";
+            });
+
+            //Swal.fire('Hello world!');
+
+        });
+
+
+    </script>
+</body>
+</html>
